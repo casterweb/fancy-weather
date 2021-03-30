@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="body">
+    <div class="overlay">
+      <header>
+        <div class="wrapper wrapper-header">
+          <div class="control">
+            <button class="control-button refresh-background">
+              <img src="./images/Vector.png" />
+            </button>
+            <button class="control-button language-button-en active">EN</button>
+            <button class="control-button language-button-ru">RU</button>
+            <button class="control-button temperature-button-farenheit">
+              &deg;F
+            </button>
+            <button class="control-button temperature-button-celsius active">
+              &deg;C
+            </button>
+          </div>
+          <div class="search">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search city or ZIP"
+            />
+            <button class="search-button">SEARCH</button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="wrapper">
+          <div class="weather">
+            <div class="weather-location-and-date">
+              <p class="weather-city"></p>
+              <p class="weather-date-and-time"></p>
+            </div>
+            <div class="weather-now">
+              <div class="weather-temperature">-2&deg;</div>
+              <div class="weather-description">
+                <div class="weather-image"></div>
+                <div class="weather-text-description">
+                  <p class="overcast">OVERCAST</p>
+                  <p class="feelsLike">Feels like:</p>
+                  <p class="speedWind">Wind:</p>
+                  <p class="humidity">Humidity:</p>
+                </div>
+              </div>
+            </div>
+            <div class="weather-forecast">
+              <div class="weather-day-forecast">
+                <p class="first-day">first</p>
+                <div class="temp-icon">
+                  <div class="first-forecast-temperature temp-forecast"></div>
+                  <div class="weather-forecast-image first-icon"></div>
+                </div>
+              </div>
+              <div class="weather-day-forecast">
+                <p class="second-day">second</p>
+                <div class="temp-icon">
+                  <div class="second-forecast-temperature temp-forecast"></div>
+                  <div class="weather-forecast-image second-icon"></div>
+                </div>
+              </div>
+              <div class="weather-day-forecast">
+                <p class="third-day">third</p>
+                <div class="temp-icon">
+                  <div class="third-forecast-temperature temp-forecast"></div>
+                  <div class="weather-forecast-image third-icon"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="location">
+            <div class="map"><div class="location-map" id="map"></div></div>
+            <p class="location-coordinates latitude"></p>
+            <p class="location-coordinates longitude"></p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="dist/main.js"></script>
+  </body>
+</html>
